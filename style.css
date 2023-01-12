@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #334155;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.logo {
+  width: 3rem;
+}
+.header .title {
+  display: flex;
+  gap: 1rem;
+}
+.header .title,
+.header nav {
+  margin: 1.5rem 6rem;
+}
+.title h2 {
+  color: white;
+  font-weight: 400;
+}
+.title h2 span {
+  display: block;
+  color: #fde047;
+  font-weight: 580;
+}
+.header li {
+  list-style: none;
+}
+.header li a {
+  text-decoration: none;
+  color: white;
+}
+.header li:hover:not(:first-of-type) {
+  transition: ease-out;
+  transform: scale(1.1);
+  transition-duration: 300ms;
+}
+li a:hover {
+  color: #fde047;
+}
+.selected {
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid #fde047;
+  font-weight: 700;
+}
+.header nav ul {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  gap: 5rem;
+}
+.svgIcon {
+  width: 2rem;
+  height: 2rem;
+  background-color: #fde047;
+  box-sizing: border-box;
+  padding: 2px;
+  cursor: pointer;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 0.2rem 0.5rem #8f7d24;
+}
+.svgIcon:hover {
+  box-shadow: 0 0 0.2rem 0.7rem #8f7d24;
+  transition: ease-out;
+  transition-duration: 400ms;
+}
+.container {
+  margin: auto 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 3rem;
+}
+.left {
+  width: 40%;
+}
+.textSection {
+  color: white;
+}
+.textSection h1 {
+  font-family: serif;
+  font-size: 4.5rem;
+  line-height: 4rem;
+  letter-spacing: 5px;
+  margin-bottom: 1rem;
+}
+.textSection p {
+  width: 75%;
+  line-height: 1.5rem;
+}
+.textSection h1 span {
+  display: block;
+  color: #fde047;
+}
+
+.illustration {
+  margin: auto 6rem;
+  width: 40rem;
+  height: 25rem;
+  object-fit: cover;
+}
+.formSection {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 50%;
+}
+input,
+button {
+  padding: 0.9rem 2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+}
+input:focus {
+  outline: 3px solid #fde047;
+  transform: scale(0.95);
+  transition: ease-out;
+  transition-duration: 120ms;
+}
+button {
+  background-color: #fde047;
+  width: 35%;
+  cursor: pointer;
+}
+button:hover {
+  transform: scale(0.95);
+  transition: ease-out;
+  transition-duration: 120ms;
+}
+.right {
+  position: relative;
+}
+.icons {
+  position: absolute;
+  width: 5rem;
+}
+.message {
+  bottom: -5rem;
+}
+.rocket {
+  left: 14rem;
+  top: -2rem;
+  width: 7rem;
+}
+.target {
+  bottom: -13rem;
+  right: 4rem;
+  width: 7rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    flex-direction: column;
+  }
+  .illustration {
+    width: 100%;
+  }
+  .icons {
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header .title,
+  .header .nav {
+    margin: 0.5rem;
+  }
+  .header {
+    align-items: center;
+  }
+  .textSection h1 {
+    font-size: 3.5rem;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left {
+    width: 90%;
+    align-items: center;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  nav ul {
+    flex-direction: column;
+  }
+  .left,
+  p {
+    width: 100%;
+  }
+  .left input {
+    width: 130%;
+  }
+  button {
+    width: 100%;
+  }
+  .illustration {
+    visibility: hidden;
+  }
+}
